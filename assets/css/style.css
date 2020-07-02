@@ -1,0 +1,2104 @@
+
+body{background-color : #ffa84e;
+ font-family: Arial, sans-serif;
+ color : #000000;}
+ 
+ .main-grid
+ {
+ display: grid;
+ grid-gap: 10px;
+   grid-template-columns: auto auto auto auto;
+   grid-template-areas:
+   "header header header header" 
+    "navcontainer navcontainer navcontainer navcontainer"
+    ". origins origins ."
+    "p-origins p-origins p-origins p-origins"
+    "internet . . www"
+    "int . . w"
+    "term term term term"
+    "email email .... ...."
+    "p-email p-email .... ...."
+    ".... .... telnet telnet"
+    ".... .... p-telnet p-telnet"
+    "ssh ssh .... ...."
+    "p-ssh p-ssh .... ...."
+    ".... .... ftp ftp"
+    ".... .... p-ftp p-ftp"
+    "http http .... ...."
+    "p-http p-http .... ...."
+    ".... .... gopher gopher"
+    ".... .... p-gopher p-gopher"
+    "browser browser .... ...."
+    "p-browser p-browser .... ...."
+    ".... .... lynx lynx"
+    ".... .... p-lynx p-lynx"
+    "mosaic mosaic .... ...."
+    "p-mosaic p-mosaic .... ...."
+    ".... .... hypertext hypertext"
+    ".... .... p-hypertext p-hypertext"
+ }
+ 
+ 
+ 
+ .header{
+ grid-area: header;	 
+ text-decoration: underline;
+ 
+ }
+ 
+ .nav{
+ grid-area:navcontainer;
+ text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+ }
+ 
+ .nav a{
+ display: inline-block;
+ padding: 15px 20px;
+ border: 1px solid blue; 
+ }
+ 
+ a:hover:not(.active) {
+  background-color: #7CFC00;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+ 
+ .origins{
+ grid-area:origins;
+ text-decoration: underline;
+ }
+ 
+ .p-origins{
+ grid-area:p-origins;
+ }
+ 
+ .internet{
+ grid-area:internet;
+ text-decoration: underline;
+ }
+ 
+ .www{
+ grid-area:www;
+ text-decoration: underline;
+ }
+ 
+ .int{
+ grid-area:int;
+ text-align:justify;
+ }
+ 
+ .w{
+ grid-area:w;
+ text-align:justify;
+ }
+ 
+ .term{
+	 grid-area:term;
+	 text-decoration: underline;
+ }
+ 
+ .email{
+	 grid-area:email;
+	 text-decoration: underline;
+ }
+ 
+ .p-email{
+	 grid-area:p-email;
+	 text-align:justify;
+ }
+ 
+ .telnet{
+	 grid-area:telnet;
+	 text-decoration: underline;
+ }
+ 
+ .p-telnet{
+	 grid-area:p-telnet;
+	 text-align:justify;
+ }
+ 
+ .ssh{
+	 grid-area:ssh;
+	 text-decoration: underline;
+ }
+ 
+ .p-ssh{
+	 grid-area:p-ssh;
+	 text-align:justify;
+ }
+ 
+ .ftp{
+	 grid-area:ftp;
+	 text-decoration: underline;
+ }
+ 
+ .p-ftp{
+	 grid-area:p-ftp;
+	 text-align:justify;
+ }
+ 
+ .http{
+	 grid-area:http;
+	 text-decoration: underline;
+ }
+ 
+ .p-http{
+	 grid-area:p-http;
+	 text-align:justify;
+ }
+ 
+ .gopher{
+	grid-area:gopher; 
+	text-decoration: underline;
+ }
+ 
+ .p-gopher{
+	 grid-area:p-gopher;
+	 text-align:justify;
+ }
+ 
+ .browser{
+	 grid-area:browser;
+	 text-decoration: underline;
+ }
+ 
+ .p-browser{
+	 grid-area:p-browser;
+	 text-align:justify;
+ }
+ 
+ .lynx{
+	 grid-area:lynx;
+	 text-decoration: underline;
+ }
+
+ .p-lynx{
+	 grid-area:p-lynx;
+	 text-align:justify;
+ }
+ 
+ .mosaic{
+	 grid-area:mosaic;
+	 text-decoration: underline;
+ }
+ 
+ .p-mosaic{
+	 grid-area:p-mosaic;
+	 text-align:justify;
+ }
+ 
+ .hypertext{
+	 grid-area:hypertext;
+	 text-decoration: underline;
+ }
+ 
+  .p-hypertext{
+	 grid-area:p-hypertext;
+	 text-align:justify;
+ }
+ 
+  .header,.nav,.origins,.p-origins,.internet,.www,.int,.w,.term, .email,.telnet,.ssh,.ftp,.http,.gopher,.browser,
+  .lynx,.mosaic,.hypertext{
+ justify-content:space-around;
+ text-align:center;
+ }
+ 
+ 
+ 
+ .http-grid{
+	 display: grid;
+	 grid-gap:10px;
+	 grid-template-columns:auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+	 grid-template-areas:
+	 ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . hdr hdr . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
+	 ". . . . . . . . . . . . . . .  . . . . . . . . . . . . . . . . navctr navctr . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
+	 ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . image image . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
+	 ". . . . . . . . . . . . . . .  . . . . . . . . . . . . . . . . sent sent . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
+	 ". . . . . . . . . . . . . . .  . . . . . . . . . . . . . . . . step step . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
+ }
+ 
+ .hdr{
+	 grid-area:hdr;
+	 text-decoration: underline;
+	 text-align:center;
+ }
+ 
+ .navctr{
+	 grid-area:navctr;
+	 text-align:center;
+  padding: 14px 16px;
+  text-decoration: none;
+ }
+ 
+ .navctr a{
+ display: inline-block;
+ padding: 15px 20px;
+ border: 1px solid blue; 
+ }
+ 
+ a:hover:not(.active) {
+  background-color: #7CFC00;
+}
+
+.active {
+  background-color: #4CAF50;
+} 
+ .image{
+	 grid-area:image;
+ }
+ 
+ .sent{
+	 grid-area:sent;
+ }
+ 
+ .step{
+	 grid-area:sent;
+	 text-decoration: underline;
+ }
+ 
+ .pioneers-grid{
+	 display:grid;
+	 grid-gap:20px;
+	 grid-template-columns:auto auto auto auto;
+	 grid-template-areas:
+	 "headingpi headingpi headingpi headingpi"
+	 "navpi navpi navpi navpi"
+	 "names1 . . names2"
+	 "imagepi1 info1 info2 imagepi2"
+	 "names3 . . names4"
+	 "imagepi3 info3 info4 imagepi4"
+	 "names5 . . names6"
+	 "imagepi5 info5 info6 imagepi6"
+	 "names7 . . names8"
+	 "imagepi7 info7 info8 imagepi8"
+	 "names9 . . names10"
+	 "imagepi9 info9 info10 imagepi10"
+
+ }
+ 
+ #headingpi{
+	 grid-area:headingpi;
+	 text-decoration: underline;
+	 text-align:center;
+ }
+ 
+ #navpi{
+	 grid-area:navpi;
+	 text-align:center;
+  padding: 14px 16px;
+  text-decoration: none;
+ }
+ 
+ #navpi a{
+ display: inline-block;
+ padding: 15px 20px;
+ border: 1px solid blue; 
+ }
+ 
+ a:hover:not(.active) {
+  background-color: #7CFC00;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+ 
+ #names1{
+	 grid-area:names1;
+	 text-align:center;
+	 text-decoration: underline;
+ }
+ 
+ #names2{
+	 grid-area:names2;
+	 text-align:center;
+	 text-decoration: underline;
+ }
+
+ #names3{
+	 grid-area:names3;
+	 text-align:center;
+	 text-decoration: underline;
+ }
+ 
+ #names4{
+	 grid-area:names4;
+	 text-align:center;
+	 text-decoration: underline;
+ }
+ 
+ #names5{
+	 grid-area:names5;
+	 text-align:center;
+	 text-decoration: underline;
+ }
+ 
+ #names6{
+	 grid-area:names6;
+	 text-align:center;
+	 text-decoration: underline;
+ }
+ 
+  #names7{
+	 grid-area:names7;
+	 text-align:center;
+	 text-decoration: underline;
+ }
+ 
+ #names8{
+	 grid-area:names8;
+	 text-align:center;
+	 text-decoration: underline;
+ }
+  #names9{
+	 grid-area:names9;
+	 text-align:center;
+	 text-decoration: underline;
+ }
+ 
+ #names10{
+	 grid-area:names10;
+	 text-align:center;
+	 text-decoration: underline;
+ }
+ 
+ #imagepi1{
+	 grid-area:imagepi1;
+
+ }
+ 
+ #info1{
+	 grid-area:info1;
+	 text-align:justify;
+ }
+ 
+ #imagepi2{
+	 grid-area:imagepi2;
+ }
+ 
+ #info2{
+	 grid-area:info2;
+	 text-align:justify;
+ }
+ 
+ #imagepi3{
+	 grid-area:imagepi3;
+
+ }
+ 
+ #info3{
+	 grid-area:info3;
+	 text-align:justify;
+ }
+ 
+  #imagepi4{
+	 grid-area:imagepi4;
+
+ }
+ 
+ #info4{
+	 grid-area:info4;
+	 text-align:justify;
+ }
+ 
+ #imagepi5{
+	 grid-area:imagepi5;
+
+ }
+ 
+ #info5{
+	 grid-area:info5;
+	 text-align:justify;
+ }
+ 
+ #imagepi6{
+	 grid-area:imagepi6;
+
+ }
+ 
+ #info6{
+	 grid-area:info6;
+	 text-align:justify;
+ }
+ 
+ #imagepi7{
+	 grid-area:imagepi7;
+
+ }
+ 
+ #info7{
+	 grid-area:info7;
+	 text-align:justify;
+ }
+ 
+  #imagepi8{
+	 grid-area:imagepi8;
+
+ }
+ 
+ #info8{
+	 grid-area:info8;
+	 text-align:justify;
+ }
+ 
+   #imagepi9{
+	 grid-area:imagepi9;
+
+ }
+ 
+ #info9{
+	 grid-area:info9;
+	 text-align:justify;
+ }
+ 
+   #imagepi10{
+	 grid-area:imagepi10;
+
+ }
+ 
+ #info10{
+	 grid-area:info10;
+	 text-align:justify;
+ }
+ 
+ 
+ .terminology-grid{
+	 display:grid;
+	 grid-gap:20px;
+	 grid-template-columns: auto auto auto auto;
+	 grid-template-areas:
+	 "headingte headingte headingte headingte"
+	 "navte navte navte navte"
+	 "int int . ."
+	 "int-p int-p . ."
+	 ". . www www"
+	 ". . www-p www-p"
+	 "hypt hypt . ."
+	 "hypt-p hypt-p . ."
+	 ". . mult mult"
+	 ". . mult-p mult-p"
+	 "cli cli . ."
+	 "cli-p cli-p . ."
+	 ". . gui gui"
+	 ". . gui-p gui-p"
+	 "hci hci . ."
+	 "hci-p hci-p . ."
+	 ". . ftp ftp"
+	 ". . ftp-p ftp-p"
+	 "ssh ssh . ."
+	 "ssh-p ssh-p . ."
+	 ". . http http"
+	 ". . http-p http-p"
+	 "telnet telnet . ."
+	 "telnet-p telnet-p . ."
+	 ". . html html"
+	 ". . html-p html-p"
+	 "css css . ."
+	 "css-p css-p . ."
+ }
+ 
+ #headingte{
+	 grid-area:headingte;
+	 text-decoration: underline;
+	 text-align:center;
+ }
+ 
+ #navte{
+	 grid-area:navte;
+	 text-align:center;
+  padding: 14px 16px;
+  text-decoration: none;
+ }
+ 
+ #navte a{
+ display: inline-block;
+ padding: 15px 20px;
+ border: 1px solid blue; 
+ }
+ 
+ a:hover:not(.active) {
+  background-color: #7CFC00;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+ #int{
+	 grid-area:int;
+	 text-decoration: underline;
+	 text-align:center;
+ }
+ 
+ #int-p{
+	 grid-area:int-p;
+	 text-align:justify;
+ }
+ 
+ #www{
+	 grid-area:www;
+	 text-decoration: underline;
+	 text-align:center;
+ }
+ 
+ #www-p{
+	 grid-area:www-p;
+	 text-align:justify;
+ }
+ 
+ #hypt{
+	grid-area:hypt; 
+	 text-decoration: underline;
+	 text-align:center;	
+ }
+ 
+ #hypt-p{
+	 grid-area:hypt-p;
+	 text-align:justify;
+ }
+ 
+ #mult{
+	 grid-area:mult;
+	 text-decoration: underline;
+	 text-align:center;	 
+ }
+ 
+ #mult-p{
+	 grid-area:mult-p;
+	 text-align:justify;
+ }
+ 
+ #cli{
+	 grid-area:cli;
+	 text-decoration: underline;
+	 text-align:center;	 
+ }
+ 
+ #cli-p{
+	 grid-area:cli-p;
+	 text-align:justify;
+ }
+ 
+ #gui{
+	 grid-area:gui;
+	 text-decoration: underline;
+	 text-align:center;	 
+ }
+ 
+ #gui-p{
+	 grid-area:gui-p;
+	 text-align:justify;
+ }
+ 
+ #hci{
+	 grid-area:hci;
+	 text-decoration: underline;
+	 text-align:center;	 
+ }
+ 
+ #hci-p{
+	 grid-area:hci-p;
+	 text-align:justify;
+ }
+ 
+ #ftp{
+	 grid-area:ftp;
+	 text-decoration: underline;
+	 text-align:center;	 
+ }
+ 
+ #ftp-p{
+	 grid-area:ftp-p;
+	 text-align:justify;
+ }
+ 
+ #ssh{
+	 grid-area:ssh;
+	 text-decoration: underline;
+	 text-align:center;	 
+ }
+ 
+ #ssh-p{
+	 grid-area:ssh-p;
+	 text-align:justify;
+ }
+ 
+ #http{
+	 grid-area:http;
+	 text-decoration: underline;
+	 text-align:center;	 
+ }
+ 
+ #http-p{
+	 grid-area:http-p;
+	 text-align:justify;
+ }
+ 
+ #telnet{
+	 grid-area:telnet;
+	 text-decoration: underline;
+	 text-align:center;	 
+ }
+ 
+ #telnet-p{
+	 grid-area:telnet-p;
+	 text-align:justify;
+ }
+ 
+ #html{
+	 grid-area:html;
+	 text-decoration: underline;
+	 text-align:center;	 
+ }
+ 
+ #html-p{
+	 grid-area:html-p;
+	 text-align:justify;
+ }
+ 
+ #css{
+	 grid-area:css;
+	 text-decoration: underline;
+	 text-align:center;	 
+ }
+ 
+ #css-p{
+	 grid-area:css-p;
+	 text-align:justify;
+ }
+ 
+ 
+ .ref{
+	 text-align:justify;
+	 margin: 70px 70px 70px 90px;
+ }
+ 
+ #refhead{
+	 text-align:center;
+	 text-decoration: underline;
+ }
+ 
+ #navref{
+	 text-align:center;
+  padding: 14px 16px;
+  text-decoration: none;
+ }
+ 
+  .ref li a{
+	 color:#ff0000;
+ }
+ 
+ #navref a{
+ display: inline-block;
+ padding: 15px 20px;
+ border: 1px solid blue; 
+ }
+ 
+ a:hover:not(.active) {
+  background-color: #7CFC00;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+
+
+body{background-color : #000000;
+ font-family: Arial, sans-serif;
+ color : #ffa84e;}
+ 
+ .main-grid
+ {
+ display: grid;
+ grid-gap: 10px;
+   grid-template-columns: auto auto;
+   grid-template-areas:
+   "header header" 
+    "navcontainer navcontainer"
+    "origins origins"
+    "p-origins p-origins"
+    "internet www"
+    "int w"
+    "term term"
+    "email email"
+    "p-email p-email "
+    " telnet telnet"
+    " p-telnet p-telnet"
+    "ssh ssh "
+    "p-ssh p-ssh "
+    " ftp ftp"
+    " p-ftp p-ftp"
+    "http http "
+    "p-http p-http "
+    " gopher gopher"
+    " p-gopher p-gopher"
+    "browser browser "
+    "p-browser p-browser "
+    " lynx lynx"
+    " p-lynx p-lynx"
+    "mosaic mosaic "
+    "p-mosaic p-mosaic "
+    " hypertext hypertext"
+    " p-hypertext p-hypertext"
+ }
+ 
+ 
+ 
+ .header{
+ grid-area: header;	 
+ text-decoration: underline;
+ 
+ }
+ 
+ .nav{
+ grid-area:navcontainer;
+ text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+ }
+ 
+ .nav a{
+ display: inline-block;
+ padding: 15px 20px;
+ border: 1px solid blue; 
+ }
+ 
+ a:hover:not(.active) {
+  background-color: #7CFC00;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+ .origins{
+ grid-area:origins;
+ text-decoration: underline;
+ }
+ 
+ .p-origins{
+ grid-area:p-origins;
+ }
+ 
+ .internet{
+ grid-area:internet;
+ text-decoration: underline;
+ }
+ 
+ .www{
+ grid-area:www;
+ text-decoration: underline;
+ }
+ 
+ .int{
+ grid-area:int;
+ text-align:justify;
+ }
+ 
+ .w{
+ grid-area:w;
+ text-align:justify;
+ }
+ 
+ .term{
+	 grid-area:term;
+	 text-decoration: underline;
+ }
+ 
+ .email{
+	 grid-area:email;
+	 text-decoration: underline;
+ }
+ 
+ .p-email{
+	 grid-area:p-email;
+	 text-align:justify;
+ }
+ 
+ .telnet{
+	 grid-area:telnet;
+	 text-decoration: underline;
+ }
+ 
+ .p-telnet{
+	 grid-area:p-telnet;
+	 text-align:justify;
+ }
+ 
+ .ssh{
+	 grid-area:ssh;
+	 text-decoration: underline;
+ }
+ 
+ .p-ssh{
+	 grid-area:p-ssh;
+	 text-align:justify;
+ }
+ 
+ .ftp{
+	 grid-area:ftp;
+	 text-decoration: underline;
+ }
+ 
+ .p-ftp{
+	 grid-area:p-ftp;
+	 text-align:justify;
+ }
+ 
+ .http{
+	 grid-area:http;
+	 text-decoration: underline;
+ }
+ 
+ .p-http{
+	 grid-area:p-http;
+	 text-align:justify;
+ }
+ 
+ .gopher{
+	grid-area:gopher; 
+	text-decoration: underline;
+ }
+ 
+ .p-gopher{
+	 grid-area:p-gopher;
+	 text-align:justify;
+ }
+ 
+ .browser{
+	 grid-area:browser;
+	 text-decoration: underline;
+ }
+ 
+ .p-browser{
+	 grid-area:p-browser;
+	 text-align:justify;
+ }
+ 
+ .lynx{
+	 grid-area:lynx;
+	 text-decoration: underline;
+ }
+
+ .p-lynx{
+	 grid-area:p-lynx;
+	 text-align:justify;
+ }
+ 
+ .mosaic{
+	 grid-area:mosaic;
+	 text-decoration: underline;
+ }
+ 
+ .p-mosaic{
+	 grid-area:p-mosaic;
+	 text-align:justify;
+ }
+ 
+ .hypertext{
+	 grid-area:hypertext;
+	 text-decoration: underline;
+ }
+ 
+  .p-hypertext{
+	 grid-area:p-hypertext;
+	 text-align:justify;
+ }
+ 
+  .header,.nav,.origins,.p-origins,.internet,.www,.int,.w,.term, .email,.telnet,.ssh,.ftp,.http,.gopher,.browser,
+  .lynx,.mosaic,.hypertext{
+ justify-content:space-around;
+ text-align:center;
+ }
+ 
+ 
+ 
+ .http-grid{
+	 display: grid;
+	 grid-gap:10px;
+	 grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+	 grid-template-areas:
+	 ". . . . . . . hdr hdr . . . . . . ."
+	 ". . . . . . . navctr navctr . . . . . . ."
+	 ". . . . . . . image image . . . . . . ."
+	 ". . . . . . . sent sent . . . . . . ."
+	 ". . . . . . . step step . . . . . . ."
+ }
+ 
+ .hdr{
+	 grid-area:hdr;
+	 text-decoration: underline;
+	 text-align:center;
+ }
+ 
+ .navctr{
+	 grid-area:navctr;
+	 text-align:center;
+  padding: 14px 16px;
+  text-decoration: none;
+ }
+ 
+ .navctr a{
+ display: inline-block;
+ padding: 15px 20px;
+ border: 1px solid blue; 
+ }
+ 
+ a:hover:not(.active) {
+  background-color: #7CFC00;
+}
+
+.active {
+  background-color: #4CAF50;
+} 
+ 
+ .image{
+	 grid-area:image;
+ }
+ 
+ .sent{
+	 grid-area:sent;
+ }
+ 
+ .step{
+	 grid-area:sent;
+	 text-decoration: underline;
+ }
+ 
+ .pioneers-grid{
+	 display:grid;
+	 grid-gap:20px;
+	 grid-template-columns:auto auto;
+	 grid-template-areas:
+	 "headingpi headingpi"
+	 "navpi navpi"
+	 "names1 names2"
+	 "imagepi1 imagepi2"
+	 "info1 info2"
+	 "names3 names4"
+	 "imagepi3 imagepi4"
+	 " info3 info4 "
+	 "names5  names6"
+	 "imagepi5 imagepi6"
+	 " info5 info6 "
+	 "names7 names8"
+	 "imagepi7 imagepi8"
+	 " info7 info8 "
+	 "names9 names10"
+	 "imagepi9 imagepi10"
+	 " info9 info10 "
+
+ }
+ 
+ #headingpi{
+	 grid-area:headingpi;
+	 text-decoration: underline;
+	 text-align:center;
+ }
+ 
+#navpi{
+	 grid-area:navpi;
+	 text-align:center;
+  padding: 14px 16px;
+  text-decoration: none;
+ }
+ 
+ #navpi a{
+ display: inline-block;
+ padding: 15px 20px;
+ border: 1px solid blue; 
+ }
+ 
+ a:hover:not(.active) {
+  background-color: #7CFC00;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+ 
+ #names1{
+	 grid-area:names1;
+	 text-align:center;
+	 text-decoration: underline;
+ }
+ 
+ #names2{
+	 grid-area:names2;
+	 text-align:center;
+	 text-decoration: underline;
+ }
+
+ #names3{
+	 grid-area:names3;
+	 text-align:center;
+	 text-decoration: underline;
+ }
+ 
+ #names4{
+	 grid-area:names4;
+	 text-align:center;
+	 text-decoration: underline;
+ }
+ 
+ #names5{
+	 grid-area:names5;
+	 text-align:center;
+	 text-decoration: underline;
+ }
+ 
+ #names6{
+	 grid-area:names6;
+	 text-align:center;
+	 text-decoration: underline;
+ }
+ 
+  #names7{
+	 grid-area:names7;
+	 text-align:center;
+	 text-decoration: underline;
+ }
+ 
+ #names8{
+	 grid-area:names8;
+	 text-align:center;
+	 text-decoration: underline;
+ }
+  #names9{
+	 grid-area:names9;
+	 text-align:center;
+	 text-decoration: underline;
+ }
+ 
+ #names10{
+	 grid-area:names10;
+	 text-align:center;
+	 text-decoration: underline;
+ }
+ 
+ #imagepi1{
+	 grid-area:imagepi1;
+
+ }
+ 
+ #info1{
+	 grid-area:info1;
+	 text-align:justify;
+ }
+ 
+ #imagepi2{
+	 grid-area:imagepi2;
+ }
+ 
+ #info2{
+	 grid-area:info2;
+	 text-align:justify;
+ }
+ 
+ #imagepi3{
+	 grid-area:imagepi3;
+
+ }
+ 
+ #info3{
+	 grid-area:info3;
+	 text-align:justify;
+ }
+ 
+  #imagepi4{
+	 grid-area:imagepi4;
+
+ }
+ 
+ #info4{
+	 grid-area:info4;
+	 text-align:justify;
+ }
+ 
+ #imagepi5{
+	 grid-area:imagepi5;
+
+ }
+ 
+ #info5{
+	 grid-area:info5;
+	 text-align:justify;
+ }
+ 
+ #imagepi6{
+	 grid-area:imagepi6;
+
+ }
+ 
+ #info6{
+	 grid-area:info6;
+	 text-align:justify;
+ }
+ 
+ #imagepi7{
+	 grid-area:imagepi7;
+
+ }
+ 
+ #info7{
+	 grid-area:info7;
+	 text-align:justify;
+ }
+ 
+  #imagepi8{
+	 grid-area:imagepi8;
+
+ }
+ 
+ #info8{
+	 grid-area:info8;
+	 text-align:justify;
+ }
+ 
+   #imagepi9{
+	 grid-area:imagepi9;
+
+ }
+ 
+ #info9{
+	 grid-area:info9;
+	 text-align:justify;
+ }
+ 
+   #imagepi10{
+	 grid-area:imagepi10;
+
+ }
+ 
+ #info10{
+	 grid-area:info10;
+	 text-align:justify;
+ }
+ 
+ 
+ .terminology-grid{
+	 display:grid;
+	 grid-gap:20px;
+	 grid-template-columns: auto auto;
+	 grid-template-areas:
+	 "headingte headingte"
+	 "navte navte"
+	 "int int "
+	 "int-p int-p "
+	 " www www"
+	 " www-p www-p"
+	 "hypt hypt "
+	 "hypt-p hypt-p "
+	 " mult mult"
+	 " mult-p mult-p"
+	 "cli cli "
+	 "cli-p cli-p "
+	 " gui gui"
+	 " gui-p gui-p"
+	 "hci hci "
+	 "hci-p hci-p "
+	 " ftp ftp"
+	 " ftp-p ftp-p"
+	 "ssh ssh "
+	 "ssh-p ssh-p "
+	 " http http"
+	 " http-p http-p"
+	 "telnet telnet "
+	 "telnet-p telnet-p "
+	 " html html"
+	 " html-p html-p"
+	 "css css "
+	 "css-p css-p "
+ }
+ 
+ #headingte{
+	 grid-area:headingte;
+	 text-decoration: underline;
+	 text-align:center;
+ }
+ 
+ #navte{
+	 grid-area:navte;
+	 text-align:center;
+  padding: 14px 16px;
+  text-decoration: none;
+ }
+ 
+ #navte a{
+ display: inline-block;
+ padding: 15px 20px;
+ border: 1px solid blue; 
+ }
+ 
+ a:hover:not(.active) {
+  background-color: #7CFC00;
+}
+
+.active {
+  background-color: #4CAF50;
+        }
+ #int{
+	 grid-area:int;
+	 text-decoration: underline;
+	 text-align:center;
+ }
+ 
+ #int-p{
+	 grid-area:int-p;
+	 text-align:justify;
+ }
+ 
+ #www{
+	 grid-area:www;
+	 text-decoration: underline;
+	 text-align:center;
+ }
+ 
+ #www-p{
+	 grid-area:www-p;
+	 text-align:justify;
+ }
+ 
+ #hypt{
+	grid-area:hypt; 
+	 text-decoration: underline;
+	 text-align:center;	
+ }
+ 
+ #hypt-p{
+	 grid-area:hypt-p;
+	 text-align:justify;
+ }
+ 
+ #mult{
+	 grid-area:mult;
+	 text-decoration: underline;
+	 text-align:center;	 
+ }
+ 
+ #mult-p{
+	 grid-area:mult-p;
+	 text-align:justify;
+ }
+ 
+ #cli{
+	 grid-area:cli;
+	 text-decoration: underline;
+	 text-align:center;	 
+ }
+ 
+ #cli-p{
+	 grid-area:cli-p;
+	 text-align:justify;
+ }
+ 
+ #gui{
+	 grid-area:gui;
+	 text-decoration: underline;
+	 text-align:center;	 
+ }
+ 
+ #gui-p{
+	 grid-area:gui-p;
+	 text-align:justify;
+ }
+ 
+ #hci{
+	 grid-area:hci;
+	 text-decoration: underline;
+	 text-align:center;	 
+ }
+ 
+ #hci-p{
+	 grid-area:hci-p;
+	 text-align:justify;
+ }
+ 
+ #ftp{
+	 grid-area:ftp;
+	 text-decoration: underline;
+	 text-align:center;	 
+ }
+ 
+ #ftp-p{
+	 grid-area:ftp-p;
+	 text-align:justify;
+ }
+ 
+ #ssh{
+	 grid-area:ssh;
+	 text-decoration: underline;
+	 text-align:center;	 
+ }
+ 
+ #ssh-p{
+	 grid-area:ssh-p;
+	 text-align:justify;
+ }
+ 
+ #http{
+	 grid-area:http;
+	 text-decoration: underline;
+	 text-align:center;	 
+ }
+ 
+ #http-p{
+	 grid-area:http-p;
+	 text-align:justify;
+ }
+ 
+ #telnet{
+	 grid-area:telnet;
+	 text-decoration: underline;
+	 text-align:center;	 
+ }
+ 
+ #telnet-p{
+	 grid-area:telnet-p;
+	 text-align:justify;
+ }
+ 
+ #html{
+	 grid-area:html;
+	 text-decoration: underline;
+	 text-align:center;	 
+ }
+ 
+ #html-p{
+	 grid-area:html-p;
+	 text-align:justify;
+ }
+ 
+ #css{
+	 grid-area:css;
+	 text-decoration: underline;
+	 text-align:center;	 
+ }
+ 
+ #css-p{
+	 grid-area:css-p;
+	 text-align:justify;
+ }
+ 
+ 
+ .ref{
+	 text-align:justify;
+	 margin: 70px 70px 70px 90px;
+ }
+ 
+ #refhead{
+	 text-align:center;
+	 text-decoration: underline;
+ }
+ 
+ #navref{
+	 text-align:center;
+ }
+ 
+ .ref li a{
+	 color:#ff0000;
+ }
+
+}
+
+
+@media only screen and (min-width:600px) and (max-width: 1000px) {
+
+body{background-color : #00ffff;
+ font-family: Arial, sans-serif;
+ color : #000000;}
+ 
+ .main-grid
+ {
+ display: grid;
+ grid-gap: 10px;
+   grid-template-columns: auto auto auto auto;
+   grid-template-areas:
+   "header header header header" 
+    "navcontainer navcontainer navcontainer navcontainer"
+    ". origins origins ."
+    "p-origins p-origins p-origins p-origins"
+    "internet . . www"
+    "int . . w"
+    "term term term term"
+    "email email .... ...."
+    "p-email p-email .... ...."
+    ".... .... telnet telnet"
+    ".... .... p-telnet p-telnet"
+    "ssh ssh .... ...."
+    "p-ssh p-ssh .... ...."
+    ".... .... ftp ftp"
+    ".... .... p-ftp p-ftp"
+    "http http .... ...."
+    "p-http p-http .... ...."
+    ".... .... gopher gopher"
+    ".... .... p-gopher p-gopher"
+    "browser browser .... ...."
+    "p-browser p-browser .... ...."
+    ".... .... lynx lynx"
+    ".... .... p-lynx p-lynx"
+    "mosaic mosaic .... ...."
+    "p-mosaic p-mosaic .... ...."
+    ".... .... hypertext hypertext"
+    ".... .... p-hypertext p-hypertext"
+ }
+ 
+ 
+ 
+ .header{
+ grid-area: header;	 
+ text-decoration: underline;
+ 
+ }
+ 
+.nav{
+ grid-area:navcontainer;
+ text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+ }
+ 
+ .nav a{
+ display: inline-block;
+ padding: 15px 20px;
+ border: 1px solid blue; 
+ }
+ 
+ a:hover:not(.active) {
+  background-color: #7CFC00;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+ 
+ .origins{
+ grid-area:origins;
+ text-decoration: underline;
+ }
+ 
+ .p-origins{
+ grid-area:p-origins;
+ }
+ 
+ .internet{
+ grid-area:internet;
+ text-decoration: underline;
+ }
+ 
+ .www{
+ grid-area:www;
+ text-decoration: underline;
+ }
+ 
+ .int{
+ grid-area:int;
+ text-align:justify;
+ }
+ 
+ .w{
+ grid-area:w;
+ text-align:justify;
+ }
+ 
+ .term{
+	 grid-area:term;
+	 text-decoration: underline;
+ }
+ 
+ .email{
+	 grid-area:email;
+	 text-decoration: underline;
+ }
+ 
+ .p-email{
+	 grid-area:p-email;
+	 text-align:justify;
+ }
+ 
+ .telnet{
+	 grid-area:telnet;
+	 text-decoration: underline;
+ }
+ 
+ .p-telnet{
+	 grid-area:p-telnet;
+	 text-align:justify;
+ }
+ 
+ .ssh{
+	 grid-area:ssh;
+	 text-decoration: underline;
+ }
+ 
+ .p-ssh{
+	 grid-area:p-ssh;
+	 text-align:justify;
+ }
+ 
+ .ftp{
+	 grid-area:ftp;
+	 text-decoration: underline;
+ }
+ 
+ .p-ftp{
+	 grid-area:p-ftp;
+	 text-align:justify;
+ }
+ 
+ .http{
+	 grid-area:http;
+	 text-decoration: underline;
+ }
+ 
+ .p-http{
+	 grid-area:p-http;
+	 text-align:justify;
+ }
+ 
+ .gopher{
+	grid-area:gopher; 
+	text-decoration: underline;
+ }
+ 
+ .p-gopher{
+	 grid-area:p-gopher;
+	 text-align:justify;
+ }
+ 
+ .browser{
+	 grid-area:browser;
+	 text-decoration: underline;
+ }
+ 
+ .p-browser{
+	 grid-area:p-browser;
+	 text-align:justify;
+ }
+ 
+ .lynx{
+	 grid-area:lynx;
+	 text-decoration: underline;
+ }
+
+ .p-lynx{
+	 grid-area:p-lynx;
+	 text-align:justify;
+ }
+ 
+ .mosaic{
+	 grid-area:mosaic;
+	 text-decoration: underline;
+ }
+ 
+ .p-mosaic{
+	 grid-area:p-mosaic;
+	 text-align:justify;
+ }
+ 
+ .hypertext{
+	 grid-area:hypertext;
+	 text-decoration: underline;
+ }
+ 
+  .p-hypertext{
+	 grid-area:p-hypertext;
+	 text-align:justify;
+ }
+ 
+  .header,.nav,.origins,.p-origins,.internet,.www,.int,.w,.term, .email,.telnet,.ssh,.ftp,.http,.gopher,.browser,
+  .lynx,.mosaic,.hypertext{
+ justify-content:space-around;
+ text-align:center;
+ }
+ 
+ 
+ 
+ .http-grid{
+	 display: grid;
+	 grid-gap:10px;
+	 grid-template-columns:auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+	 grid-template-areas:
+	 ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . hdr hdr . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
+	 ". . . . . . . . . . . . . . .  . . . . . . . . . . . . . . . . navctr navctr . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
+	 ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . image image . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
+	 ". . . . . . . . . . . . . . .  . . . . . . . . . . . . . . . . sent sent . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
+	 ". . . . . . . . . . . . . . .  . . . . . . . . . . . . . . . . step step . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
+ }
+ 
+ .hdr{
+	 grid-area:hdr;
+	 text-decoration: underline;
+	 text-align:center;
+ }
+ 
+.navctr{
+	 grid-area:navctr;
+	 text-align:center;
+  padding: 14px 16px;
+  text-decoration: none;
+ }
+ 
+ .navctr a{
+ display: inline-block;
+ padding: 15px 20px;
+ border: 1px solid blue; 
+ }
+ 
+ a:hover:not(.active) {
+  background-color: #7CFC00;
+}
+
+.active {
+  background-color: #4CAF50;
+} 
+ 
+ .image{
+	 grid-area:image;
+ }
+ 
+ .sent{
+	 grid-area:sent;
+ }
+ 
+ .step{
+	 grid-area:sent;
+	 text-decoration: underline;
+ }
+ 
+ .pioneers-grid{
+	 display:grid;
+	 grid-gap:20px;
+	 grid-template-columns:auto auto auto auto;
+	 grid-template-areas:
+	 "headingpi headingpi headingpi headingpi"
+	 "navpi navpi navpi navpi"
+	 "names1 . . names2"
+	 "imagepi1 info1 info2 imagepi2"
+	 "names3 . . names4"
+	 "imagepi3 info3 info4 imagepi4"
+	 "names5 . . names6"
+	 "imagepi5 info5 info6 imagepi6"
+	 "names7 . . names8"
+	 "imagepi7 info7 info8 imagepi8"
+	 "names9 . . names10"
+	 "imagepi9 info9 info10 imagepi10"
+
+ }
+ 
+ #headingpi{
+	 grid-area:headingpi;
+	 text-decoration: underline;
+	 text-align:center;
+ }
+ 
+#navpi{
+	 grid-area:navpi;
+	 text-align:center;
+  padding: 14px 16px;
+  text-decoration: none;
+ }
+ 
+ #navpi a{
+ display: inline-block;
+ padding: 15px 20px;
+ border: 1px solid blue; 
+ }
+ 
+ a:hover:not(.active) {
+  background-color: #7CFC00;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+ #names1{
+	 grid-area:names1;
+	 text-align:center;
+	 text-decoration: underline;
+ }
+ 
+ #names2{
+	 grid-area:names2;
+	 text-align:center;
+	 text-decoration: underline;
+ }
+
+ #names3{
+	 grid-area:names3;
+	 text-align:center;
+	 text-decoration: underline;
+ }
+ 
+ #names4{
+	 grid-area:names4;
+	 text-align:center;
+	 text-decoration: underline;
+ }
+ 
+ #names5{
+	 grid-area:names5;
+	 text-align:center;
+	 text-decoration: underline;
+ }
+ 
+ #names6{
+	 grid-area:names6;
+	 text-align:center;
+	 text-decoration: underline;
+ }
+ 
+  #names7{
+	 grid-area:names7;
+	 text-align:center;
+	 text-decoration: underline;
+ }
+ 
+ #names8{
+	 grid-area:names8;
+	 text-align:center;
+	 text-decoration: underline;
+ }
+  #names9{
+	 grid-area:names9;
+	 text-align:center;
+	 text-decoration: underline;
+ }
+ 
+ #names10{
+	 grid-area:names10;
+	 text-align:center;
+	 text-decoration: underline;
+ }
+ 
+ #imagepi1{
+	 grid-area:imagepi1;
+
+ }
+ 
+ #info1{
+	 grid-area:info1;
+	 text-align:justify;
+ }
+ 
+ #imagepi2{
+	 grid-area:imagepi2;
+ }
+ 
+ #info2{
+	 grid-area:info2;
+	 text-align:justify;
+ }
+ 
+ #imagepi3{
+	 grid-area:imagepi3;
+
+ }
+ 
+ #info3{
+	 grid-area:info3;
+	 text-align:justify;
+ }
+ 
+  #imagepi4{
+	 grid-area:imagepi4;
+
+ }
+ 
+ #info4{
+	 grid-area:info4;
+	 text-align:justify;
+ }
+ 
+ #imagepi5{
+	 grid-area:imagepi5;
+
+ }
+ 
+ #info5{
+	 grid-area:info5;
+	 text-align:justify;
+ }
+ 
+ #imagepi6{
+	 grid-area:imagepi6;
+
+ }
+ 
+ #info6{
+	 grid-area:info6;
+	 text-align:justify;
+ }
+ 
+ #imagepi7{
+	 grid-area:imagepi7;
+
+ }
+ 
+ #info7{
+	 grid-area:info7;
+	 text-align:justify;
+ }
+ 
+  #imagepi8{
+	 grid-area:imagepi8;
+
+ }
+ 
+ #info8{
+	 grid-area:info8;
+	 text-align:justify;
+ }
+ 
+   #imagepi9{
+	 grid-area:imagepi9;
+
+ }
+ 
+ #info9{
+	 grid-area:info9;
+	 text-align:justify;
+ }
+ 
+   #imagepi10{
+	 grid-area:imagepi10;
+
+ }
+ 
+ #info10{
+	 grid-area:info10;
+	 text-align:justify;
+ }
+ 
+ 
+ .terminology-grid{
+	 display:grid;
+	 grid-gap:20px;
+	 grid-template-columns: auto auto auto auto;
+	 grid-template-areas:
+	 "headingte headingte headingte headingte"
+	 "navte navte navte navte"
+	 "int int . ."
+	 "int-p int-p . ."
+	 ". . www www"
+	 ". . www-p www-p"
+	 "hypt hypt . ."
+	 "hypt-p hypt-p . ."
+	 ". . mult mult"
+	 ". . mult-p mult-p"
+	 "cli cli . ."
+	 "cli-p cli-p . ."
+	 ". . gui gui"
+	 ". . gui-p gui-p"
+	 "hci hci . ."
+	 "hci-p hci-p . ."
+	 ". . ftp ftp"
+	 ". . ftp-p ftp-p"
+	 "ssh ssh . ."
+	 "ssh-p ssh-p . ."
+	 ". . http http"
+	 ". . http-p http-p"
+	 "telnet telnet . ."
+	 "telnet-p telnet-p . ."
+	 ". . html html"
+	 ". . html-p html-p"
+	 "css css . ."
+	 "css-p css-p . ."
+ }
+ 
+ #headingte{
+	 grid-area:headingte;
+	 text-decoration: underline;
+	 text-align:center;
+ }
+ 
+ #navte{
+	 grid-area:navte;
+	 text-align:center;
+  padding: 14px 16px;
+  text-decoration: none;
+ }
+ 
+ #navte a{
+ display: inline-block;
+ padding: 15px 20px;
+ border: 1px solid blue; 
+ }
+ 
+ a:hover:not(.active) {
+  background-color: #7CFC00;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+ #int{
+	 grid-area:int;
+	 text-decoration: underline;
+	 text-align:center;
+ }
+ 
+ #int-p{
+	 grid-area:int-p;
+	 text-align:justify;
+ }
+ 
+ #www{
+	 grid-area:www;
+	 text-decoration: underline;
+	 text-align:center;
+ }
+ 
+ #www-p{
+	 grid-area:www-p;
+	 text-align:justify;
+ }
+ 
+ #hypt{
+	grid-area:hypt; 
+	 text-decoration: underline;
+	 text-align:center;	
+ }
+ 
+ #hypt-p{
+	 grid-area:hypt-p;
+	 text-align:justify;
+ }
+ 
+ #mult{
+	 grid-area:mult;
+	 text-decoration: underline;
+	 text-align:center;	 
+ }
+ 
+ #mult-p{
+	 grid-area:mult-p;
+	 text-align:justify;
+ }
+ 
+ #cli{
+	 grid-area:cli;
+	 text-decoration: underline;
+	 text-align:center;	 
+ }
+ 
+ #cli-p{
+	 grid-area:cli-p;
+	 text-align:justify;
+ }
+ 
+ #gui{
+	 grid-area:gui;
+	 text-decoration: underline;
+	 text-align:center;	 
+ }
+ 
+ #gui-p{
+	 grid-area:gui-p;
+	 text-align:justify;
+ }
+ 
+ #hci{
+	 grid-area:hci;
+	 text-decoration: underline;
+	 text-align:center;	 
+ }
+ 
+ #hci-p{
+	 grid-area:hci-p;
+	 text-align:justify;
+ }
+ 
+ #ftp{
+	 grid-area:ftp;
+	 text-decoration: underline;
+	 text-align:center;	 
+ }
+ 
+ #ftp-p{
+	 grid-area:ftp-p;
+	 text-align:justify;
+ }
+ 
+ #ssh{
+	 grid-area:ssh;
+	 text-decoration: underline;
+	 text-align:center;	 
+ }
+ 
+ #ssh-p{
+	 grid-area:ssh-p;
+	 text-align:justify;
+ }
+ 
+ #http{
+	 grid-area:http;
+	 text-decoration: underline;
+	 text-align:center;	 
+ }
+ 
+ #http-p{
+	 grid-area:http-p;
+	 text-align:justify;
+ }
+ 
+ #telnet{
+	 grid-area:telnet;
+	 text-decoration: underline;
+	 text-align:center;	 
+ }
+ 
+ #telnet-p{
+	 grid-area:telnet-p;
+	 text-align:justify;
+ }
+ 
+ #html{
+	 grid-area:html;
+	 text-decoration: underline;
+	 text-align:center;	 
+ }
+ 
+ #html-p{
+	 grid-area:html-p;
+	 text-align:justify;
+ }
+ 
+ #css{
+	 grid-area:css;
+	 text-decoration: underline;
+	 text-align:center;	 
+ }
+ 
+ #css-p{
+	 grid-area:css-p;
+	 text-align:justify;
+ }
+ 
+ 
+ .ref{
+	 text-align:justify;
+	 margin: 70px 70px 70px 90px;
+ }
+ 
+ #refhead{
+	 text-align:center;
+	 text-decoration: underline;
+ }
+ 
+ #navref{
+	 text-align:center;
+ }
+ 
+  .ref li a{
+	 color:#ff0000;
+ }
+
+}
